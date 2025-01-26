@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Pokemon, PokemonComponent } from '../pokemon/pokemon.component';
+import { Pokemon } from '../pokemon/pokemon.component';
 import { CommonModule } from '@angular/common';
 import { ApiService } from '../../services/service/api.service';
 import { catchError, forkJoin, map, Observable, of, switchMap } from 'rxjs';
@@ -7,7 +7,7 @@ import { SearchboxService } from '../../services/searchbox/searchbox.service';
 
 @Component({
   selector: 'app-pokemons-array', // Selector para usar este componente en HTML
-  imports: [PokemonComponent, CommonModule], // Importa otros componentes y módulos necesarios
+  imports: [CommonModule], // Importa otros componentes y módulos necesarios
   templateUrl: './pokemons-array.component.html', // Ruta al archivo de plantilla HTML
   styleUrls: ['./pokemons-array.component.css'] // Ruta al archivo de estilos CSS
 })
