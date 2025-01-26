@@ -1,0 +1,85 @@
+/* Contenedor principal de las tarjetas de Pokémon */
+.pokemon-container {
+  display: flex; /* Usamos flexbox para organizar las tarjetas */
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten a múltiples filas si no caben en una sola */
+  gap: 16px; /* Espaciado uniforme entre las tarjetas */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+/* Estilo de las tarjetas individuales */
+.pokemon-card {
+  background: #fff; /* Fondo blanco para las tarjetas */
+  border-radius: 8px; /* Bordes redondeados para un diseño más suave */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar un efecto de elevación */
+  overflow: hidden; /* Asegura que los bordes redondeados afecten a todo el contenido */
+  width: 300px; /* Ancho fijo para las tarjetas */
+  display: flex; /* Organiza el contenido interno con flexbox */
+  flex-direction: column; /* Los elementos internos se apilan verticalmente */
+}
+
+/* Encabezado de la tarjeta, que contiene la imagen */
+.card-header img {
+  width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+  height: 150px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Asegura que la imagen mantenga proporciones y llene el espacio */
+}
+
+/* Contenido principal de la tarjeta */
+.card-content {
+  padding: 16px; /* Espaciado interno para separar el texto de los bordes */
+}
+
+/* Estilo del título del Pokémon */
+.card-content h3 {
+  margin: 0; /* Elimina el margen por defecto del encabezado */
+  font-size: 1.5rem; /* Tamaño de fuente grande para destacar el nombre */
+  color: #333; /* Color oscuro para una buena legibilidad */
+}
+
+/* Estilo de los párrafos dentro del contenido */
+.card-content p {
+  margin: 8px 0; /* Espaciado vertical entre párrafos */
+  font-size: 0.9rem; /* Tamaño de fuente moderado */
+  color: #666; /* Color gris para un contraste suave */
+}
+
+/* Pie de la tarjeta, que contiene las estadísticas */
+.card-footer {
+  padding: 16px; /* Espaciado interno */
+  background: #f9f9f9; /* Fondo gris claro para diferenciarlo del contenido */
+  border-top: 1px solid #e0e0e0; /* Línea superior para separar visualmente del contenido */
+  display: flex; /* Usa flexbox para organizar las estadísticas */
+  flex-wrap: wrap; /* Permite que las estadísticas se ajusten a varias filas si es necesario */
+  gap: 8px; /* Espaciado entre estadísticas */
+  font-size: 0.9rem; /* Tamaño de fuente moderado */
+  color: #555; /* Color gris oscuro */
+}
+
+/* Estilo de los párrafos en el pie de la tarjeta */
+.card-footer p {
+  margin: 0; /* Elimina el margen por defecto */
+  flex: 1 1 calc(50% - 8px); /* Cada estadística ocupa el 50% del ancho disponible */
+  text-align: center; /* Centra el texto dentro de cada estadística */
+}
+
+/* Media Queries para diseño responsive */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .pokemon-container {
+      flex-direction: column; /* Las tarjetas se organizan en una columna */
+      align-items: center; /* Centra las tarjetas en la pantalla */
+  }
+
+  .pokemon-card {
+      width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+      margin-bottom: 16px; /* Espaciado adicional entre tarjetas */
+  }
+}
+
+/* Para pantallas medianas (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .pokemon-card {
+      width: 80%; /* Ocupa el 80% del ancho, permitiendo dos tarjetas por fila */
+  }
+}

@@ -1,0 +1,8 @@
+.example-card {
+    max-width: 400px;
+}
+
+.example-header-image {
+    background-image: url('C:/Users/david/Desktop/GIM/Master/Prueba Roams/roams-test/public/images/exampleImageGirl.jpg');
+    background-size: cover;
+}

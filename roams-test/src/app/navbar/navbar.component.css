@@ -1,0 +1,77 @@
+/* Barra de navegación principal */
+.navbar {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 16px;
+    background-color: #f8f9fa; /* Fondo claro */
+    border-bottom: 1px solid #e0e0e0; /* Línea sutil en la parte inferior */
+  }
+  
+  /* Formulario de búsqueda */
+  .search-form {
+    display: flex;
+    width: 100%;
+    max-width: 600px; /* Limita el tamaño máximo del campo de búsqueda */
+    justify-content: center;
+  }
+  
+  /* Campo de entrada de búsqueda */
+  .search-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .search-input:focus {
+    border-color: #007bff; /* Cambia el color del borde al hacer foco */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Sombra azul sutil */
+  }
+  
+  /* Diseño responsive */
+  
+  /* Pantallas pequeñas (móviles) */
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column; /* Cambia a diseño vertical */
+      padding: 12px;
+    }
+  
+    .search-form {
+      width: 100%;
+      padding: 0 12px; /* Espaciado lateral para evitar bordes pegados */
+    }
+  
+    .search-input {
+      font-size: 0.9rem; /* Texto ligeramente más pequeño */
+      padding: 10px;
+    }
+  }
+  
+  /* Pantallas medianas (tablets) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .search-form {
+      max-width: 500px; /* Ajusta el tamaño máximo del campo */
+    }
+  
+    .search-input {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  }
+  
+  /* Pantallas grandes (escritorios) */
+  @media (min-width: 1025px) {
+    .search-form {
+      max-width: 600px; /* El tamaño máximo es más amplio en pantallas grandes */
+    }
+  
+    .search-input {
+      font-size: 1.1rem; /* Campo de entrada ligeramente más grande */
+      padding: 14px;
+    }
+  }
